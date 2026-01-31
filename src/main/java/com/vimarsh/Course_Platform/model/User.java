@@ -3,7 +3,7 @@ package com.vimarsh.Course_Platform.model;
 import jakarta.persistence.*;
 
 @Entity
-class User {
+public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;

@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-class SubTopic {
+public class SubTopic {
     @Id
     private int id;
 

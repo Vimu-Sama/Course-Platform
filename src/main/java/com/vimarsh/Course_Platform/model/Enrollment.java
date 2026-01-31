@@ -6,7 +6,7 @@ import java.time.Instant;
 
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "course_id"})})
-class Enrollment {
+public class Enrollment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

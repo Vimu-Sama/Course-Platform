@@ -6,7 +6,7 @@ import java.time.Instant;
 
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "subtopic_id"})})
-class SubTopicProgress {
+public class SubTopicProgress {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id ;
+    private String id ;
 
     private String title ;
 
@@ -16,7 +16,7 @@ public class Topic {
     @ManyToOne
     private Topic topic ;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

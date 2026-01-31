@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 public class Course {
     @Id
-    private int id ;
+    private String id ;
 
     private String title ;
     private String description ;
@@ -17,7 +17,7 @@ public class Course {
     @OneToMany(mappedBy = "course")
     private List<Topic> topics ;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

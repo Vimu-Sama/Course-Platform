@@ -8,7 +8,7 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class SubTopic {
     @Id
-    private int id;
+    private String id;
 
     private String title;
 
@@ -18,7 +18,7 @@ public class SubTopic {
     @ManyToOne
     private Topic topic;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

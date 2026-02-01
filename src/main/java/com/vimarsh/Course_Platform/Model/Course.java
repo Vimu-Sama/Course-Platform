@@ -1,5 +1,6 @@
 package com.vimarsh.Course_Platform.Model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -14,7 +15,7 @@ public class Course {
     private String title ;
     private String description ;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
     private List<Topic> topics ;
 
     public String getId() {

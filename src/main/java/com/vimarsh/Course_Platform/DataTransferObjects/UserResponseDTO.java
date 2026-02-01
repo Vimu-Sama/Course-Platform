@@ -14,6 +14,18 @@ public class UserResponseDTO {
         this.message = message;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

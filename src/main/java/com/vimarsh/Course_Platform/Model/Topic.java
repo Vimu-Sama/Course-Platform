@@ -2,6 +2,8 @@ package com.vimarsh.Course_Platform.Model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Topic {
     @Id
@@ -10,11 +12,12 @@ public class Topic {
 
     private String title ;
 
-    @Column(columnDefinition = "TEXT")
-    private String content; // markdown
+    @OneToMany(mappedBy = "topic")
+    private List<SubTopic> subTopics ;
 
     @ManyToOne
-    private Topic topic ;
+    @JoinColumn(name= "id")
+    private Course course ;
 
     public String getId() {
         return id;
@@ -28,19 +31,11 @@ public class Topic {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
+    public Course getTopic() {
+        return course;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Topic getTopic() {
-        return topic;
-    }
-
-    public void setTopic(Topic topic) {
-        this.topic = topic;
+    public void setTopic(Course course) {
+        this.course = course;
     }
 }

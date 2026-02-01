@@ -1,9 +1,6 @@
 package com.vimarsh.Course_Platform.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class SubTopic {
@@ -16,6 +13,7 @@ public class SubTopic {
     private String content; // markdown
 
     @ManyToOne
+    @JoinColumn(name= "id")
     private Topic topic;
 
     public String getId() {

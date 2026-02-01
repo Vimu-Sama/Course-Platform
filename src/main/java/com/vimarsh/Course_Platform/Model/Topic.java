@@ -1,5 +1,6 @@
 package com.vimarsh.Course_Platform.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class Topic {
 
     private String title;
 
+    @JsonProperty("subtopics")
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
     private List<SubTopic> subTopics;
 

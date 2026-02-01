@@ -1,22 +1,20 @@
-package com.vimarsh.Course_Platform.model;
+package com.vimarsh.Course_Platform.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
-public class SubTopic {
+public class Topic {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id ;
 
-    private String title;
+    private String title ;
 
     @Column(columnDefinition = "TEXT")
     private String content; // markdown
 
     @ManyToOne
-    private Topic topic;
+    private Topic topic ;
 
     public String getId() {
         return id;
@@ -46,4 +44,3 @@ public class SubTopic {
         this.topic = topic;
     }
 }
-

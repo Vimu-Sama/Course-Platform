@@ -1,9 +1,9 @@
-package com.vimarsh.Course_Platform.controller;
+package com.vimarsh.Course_Platform.Controller;
 
 import com.vimarsh.Course_Platform.DataTransferObjects.UserRequestDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserResponseDTO;
 import com.vimarsh.Course_Platform.Service.UserService;
-import com.vimarsh.Course_Platform.model.User;
+import com.vimarsh.Course_Platform.Model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.util.Pair;

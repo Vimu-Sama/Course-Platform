@@ -1,4 +1,4 @@
-package com.vimarsh.Course_Platform.model;
+package com.vimarsh.Course_Platform.Model;
 
 import jakarta.persistence.*;
 

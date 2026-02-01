@@ -1,16 +1,12 @@
 package com.vimarsh.Course_Platform.Service;
 
-import com.vimarsh.Course_Platform.DataTransferObjects.UserRequestDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserResponseDTO;
 import com.vimarsh.Course_Platform.Repository.UserRepository;
-import com.vimarsh.Course_Platform.model.User;
-import org.slf4j.ILoggerFactory;
+import com.vimarsh.Course_Platform.Model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserService {

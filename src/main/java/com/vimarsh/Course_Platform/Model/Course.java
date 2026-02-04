@@ -1,11 +1,13 @@
 package com.vimarsh.Course_Platform.Model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Course {
@@ -16,7 +18,8 @@ public class Course {
     private String description ;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
-    private List<Topic> topics ;
+    @JsonManagedReference
+    private Set<Topic> topics ;
 
     public String getId() {
         return id;
@@ -38,11 +41,11 @@ public class Course {
         this.description = description;
     }
 
-    public List<Topic> getTopics() {
+    public Set<Topic> getTopics() {
         return topics;
     }
 
-    public void setTopics(List<Topic> topics) {
+    public void setTopics(Set<Topic> topics) {
         this.topics = topics;
     }
 }

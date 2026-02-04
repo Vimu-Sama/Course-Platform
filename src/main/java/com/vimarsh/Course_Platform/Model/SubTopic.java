@@ -1,8 +1,11 @@
 package com.vimarsh.Course_Platform.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 @Entity
+@JsonPropertyOrder({ "id", "title", "content" })
 public class SubTopic {
     @Id
     // Removed @GeneratedValue because your JSON uses custom IDs like "speed", "velocity"
@@ -15,6 +18,7 @@ public class SubTopic {
 
     @ManyToOne
     @JoinColumn(name = "topic_id")
+    @JsonBackReference
     private Topic topic;
 
     // Getters and Setters

@@ -5,6 +5,7 @@ import com.vimarsh.Course_Platform.DataTransferObjects.LoginResponseDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserRequestDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserResponseDTO;
 import com.vimarsh.Course_Platform.Exception.UserBadRequestDTOError;
+import com.vimarsh.Course_Platform.Model.Enrollment;
 import com.vimarsh.Course_Platform.Service.AuthService;
 import com.vimarsh.Course_Platform.Service.UserService;
 import com.vimarsh.Course_Platform.Model.User;
@@ -12,10 +13,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")

@@ -1,12 +1,16 @@
 package com.vimarsh.Course_Platform.Controller;
 
+import com.vimarsh.Course_Platform.DataTransferObjects.LoginRequestDTO;
+import com.vimarsh.Course_Platform.DataTransferObjects.LoginResponseDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserRequestDTO;
 import com.vimarsh.Course_Platform.DataTransferObjects.UserResponseDTO;
 import com.vimarsh.Course_Platform.Exception.UserBadRequestDTOError;
+import com.vimarsh.Course_Platform.Service.AuthService;
 import com.vimarsh.Course_Platform.Service.UserService;
 import com.vimarsh.Course_Platform.Model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 public class UserController {
 
+    @Autowired
+    AuthService authService ;
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
     private final UserService userService ;
 
@@ -62,5 +68,39 @@ public class UserController {
                 userRequestDTO.getEmail());
 
         return ResponseEntity.status(201).body(response);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO request) {
+
+        log.info("[LOGIN-USER] [POST /api/auth/login] " +
+                        "[METHOD: UserController.login] [STEP: START] userEmail={}",
+                request.getEmail());
+
+        if (request.getEmail() == null || request.getPassword() == null) {
+
+            log.error("[LOGIN-USER] [POST /api/auth/login] " +
+                            "[METHOD: UserController.login] [STEP: INVALID_DTO] userEmail={}",
+                    request.getEmail());
+
+            throw new UserBadRequestDTOError(
+                    "Login request not properly structured, request -> " + request
+            );
+        }
+
+        log.info("[LOGIN-USER] [POST /api/auth/login] " +
+                        "[METHOD: UserController.login] [STEP: AUTH_START] userEmail={}",
+                request.getEmail());
+
+        LoginResponseDTO response = authService.loginAuth(
+                request.getEmail(),
+                request.getPassword()
+        );
+
+        log.info("[LOGIN-USER] [POST /api/auth/login] " +
+                        "[METHOD: UserController.login] [STEP: AUTH_SUCCESS] userEmail={}",
+                request.getEmail());
+
+        return ResponseEntity.ok(response);
     }
 }

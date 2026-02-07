@@ -2,6 +2,7 @@ package com.vimarsh.Course_Platform.Controller;
 
 import com.vimarsh.Course_Platform.Model.Enrollment;
 import com.vimarsh.Course_Platform.Service.EnrollmentService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class EnrollmentController {
     private EnrollmentService enrollmentService ;
 
     @PostMapping("/api/courses/{courseId}/enroll")
+    @SecurityRequirement(name = "BearerAuth")
     public ResponseEntity<?> enroll(
             @PathVariable String courseId,
             Authentication authentication) {

@@ -8,7 +8,6 @@ It uses **JWT-based authentication**, **PostgreSQL as the primary database**, an
 
 The project is built following standard layered architecture and is designed to be secure, scalable, and production-ready.
 It can be accessed here-> https://course-platform-production.up.railway.app/swagger-ui/index.html
----
 
 ## 🏗️ High-Level Architecture
 
@@ -40,8 +39,6 @@ It can be accessed here-> https://course-platform-production.up.railway.app/swag
 ```
 
 ```
-
----
 
 ## 🔐 Security Flow (JWT Authentication)
 

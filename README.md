@@ -52,6 +52,7 @@ It can be accessed here-> https://course-platform-production.up.railway.app/swag
 ## 🔐 Security Flow (JWT Authentication)
 
 ```
+```
 
 Client
 |

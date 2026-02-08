@@ -1,10 +1,4 @@
 # 🚀 Course Platform — Backend Service (Spring Boot)
-
-Below is a **single, copy-paste ready README file** that you can directly place in your repository as `README.md`.
-
----
-
-```md
 # 📚 Course Platform (Backend)
 
 ## 🔹 Overview

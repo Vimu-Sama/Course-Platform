@@ -1,5 +1,4 @@
-# 🚀 Course Platform — Backend Service (Spring Boot)
-# 📚 Course Platform (Backend)
+# Course Platform (Backend)
 
 ## 🔹 Overview
 

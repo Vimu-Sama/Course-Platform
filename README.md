@@ -267,21 +267,22 @@ cd course-platform
 
 ## ✅ Features
 
-✔ JWT Authentication
-✔ Role-based Security (extensible)
-✔ RESTful APIs
-✔ PostgreSQL Integration
-✔ Swagger Documentation
-✔ Railway Deployment Ready
-✔ Global Exception Handling
+- JWT Authentication  
+- Role-based Security (extensible)  
+- RESTful APIs  
+- PostgreSQL Integration  
+- Swagger Documentation  
+- Railway Deployment Ready  
+- Global Exception Handling  
 
 ---
 
 ## 👨‍💻 Author
 
-**Vimarsh Sharma**
-Backend Developer
-Spring Boot | Java | PostgreSQL | Security | Railway
+**Vimarsh Sharma**  
+Backend Developer  
+Spring Boot | Java | PostgreSQL | Security | Railway  
+
 
 ```
 ```

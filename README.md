@@ -259,7 +259,3 @@ cd course-platform
 **Vimarsh Sharma**  
 Backend Developer  
 Spring Boot | Java | PostgreSQL | Security | Railway  
-
-
-```
-```

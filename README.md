@@ -12,8 +12,6 @@ It can be accessed here-> https://course-platform-production.up.railway.app/swag
 ## 🏗️ High-Level Architecture
 
 ```
-
-```
                     +----------------------+
                     |      Client         |
                     | (Postman / Browser) |
@@ -38,13 +36,9 @@ It can be accessed here-> https://course-platform-production.up.railway.app/swag
                      +-------------------+
 ```
 
-```
-
 ## 🔐 Security Flow (JWT Authentication)
 
 ```
-```
-
 Client
 |
 | POST /auth/login  (email + password)
@@ -74,8 +68,6 @@ v
 Request reaches Controller
 
 ```
-
----
 
 ## 📦 Tech Stack
 
@@ -156,8 +148,6 @@ src/main/java/com/vimarsh/Course_Platform/
 
 ```
 
----
-
 ## 🗄️ Database Schema (Simplified)
 
 ```
@@ -197,8 +187,6 @@ src/main/java/com/vimarsh/Course_Platform/
 
 ```
 
----
-
 ## 🌐 Swagger / API Documentation
 
 Once the application is running, access Swagger UI at:
@@ -214,8 +202,6 @@ or (on Railway)
 https://<your-railway-app>.up.railway.app/swagger-ui.html
 
 ```
-
----
 
 ## 🚀 Deployment (Railway)
 
